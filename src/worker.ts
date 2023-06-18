@@ -33,7 +33,7 @@ export default {
 			// You can also use more robust routing
 			return apiRouter.handle(request);
 		}
-
+		console.log(request.body)
 		return new Response(
 			`Try making requests to:
       <ul>
