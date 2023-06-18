@@ -16,6 +16,11 @@ router.post('/api/todos', async (request) => {
 	return new Response('Creating Todo: ' + JSON.stringify(content));
 });
 
+router.post('/', async (request) => {
+	const content = await request.json()
+	return new Response(content)
+})
+
 // 404 for everything else
 router.all('*', () => new Response('Not Found.', { status: 404 }));
 
